@@ -1,0 +1,31 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "Example project for potential employers showcasing some techniques",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markvanmeerten/quiz.git"
+  },
+  "keywords": [
+    "quiz",
+    "react",
+    "jester",
+    "axios",
+    "hooks"
+  ],
+  "author": "markvanmeerten@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markvanmeerten/quiz/issues"
+  },
+  "homepage": "https://github.com/markvanmeerten/quiz#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.1"
+  },
+  "devDependencies": {
+    "create-react-app": "^3.3.0"
+  }
+}
