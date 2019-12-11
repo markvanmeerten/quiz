@@ -2,7 +2,7 @@
   "name": "quiz",
   "version": "1.0.0",
   "description": "Example project for potential employers showcasing some techniques",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/markvanmeerten/quiz#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongoose": "^5.8.0",
     "nodemon": "^2.0.1"
   },
   "devDependencies": {
