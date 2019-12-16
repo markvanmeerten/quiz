@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+// Utils
 import axios from "axios";
+import { apiURL } from "@config";
 // Material UI
 import Button from "@material-ui/core/Button";
 
@@ -7,15 +9,12 @@ const Browser = props => {
   const [nodes, setNodes] = useState([]);
   const [activeNode, setActiveNode] = useState();
 
+  const fetchData = async parentId => {
+    const result = await axios(`${apiURL}/node/parent/${parentId}`);
+    setNodes(result.data);
+  };
+
   useEffect(() => {
-    console.log("NEW ACTIVE: ", activeNode);
-    const fetchData = async parentId => {
-      console.log("fetching..");
-      const result = await axios(
-        `http://localhost:4000/node/parent/${parentId}`
-      );
-      setNodes(result.data);
-    };
     if (activeNode) {
       fetchData(activeNode._id);
     } else {
@@ -24,7 +23,6 @@ const Browser = props => {
   }, [activeNode]);
 
   const nodeClick = (event, node) => {
-    console.log(node);
     setActiveNode(node);
   };
 
